@@ -4,11 +4,11 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.example.idla"
-        minSdkVersion 23
+        applicationId "com.example.idlaXXX" //Bundle ID
+        minSdkVersion 23 //Deployment Target
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 1 //Build
+        versionName "1.0" //Version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -17,8 +17,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions ""
+    productFlavors{
+        v1{
+            applicationId "test.idla1"
+            buildConfigField "Boolean", "foo", "true"
+        }
+
+        v2{
+            applicationId "com.example.idla2"
+            buildConfigField "Boolean", "foo", "false"
+        }
+    }
 }
 
+//Podfile
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -26,4 +39,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    v1Implementation project(':idla1')
+    v2Implementation project(':idla2')
 }

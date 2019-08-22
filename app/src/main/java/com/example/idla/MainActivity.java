@@ -1,9 +1,10 @@
 package com.example.idla;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,5 +13,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("MarkFly","Hello World");
+        if (BuildConfig.foo)
+        {
+            TextView textView = findViewById(R.id.main_label);
+            textView.setText("我是傻子");
+        }
     }
 }
