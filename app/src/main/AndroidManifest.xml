@@ -11,9 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".Lesson04Activity"></activity>
+        <activity android:name=".Lesson03Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <!--只要加新的Activity, sync後, 這邊就一定會插個空行, 金變態-->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

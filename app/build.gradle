@@ -18,13 +18,13 @@ android {
         }
     }
     flavorDimensions ""
-    productFlavors{
-        v1{
+    productFlavors {
+        v1 {
             applicationId "test.idla1"
             buildConfigField "Boolean", "foo", "true"
         }
 
-        v2{
+        v2 {
             applicationId "com.example.idla2"
             buildConfigField "Boolean", "foo", "false"
         }
