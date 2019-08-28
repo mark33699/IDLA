@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.idla.Lesson03Activity">
+    android:orientation="vertical"
+    tools:context="com.example.idla.Lesson03.Lesson03Activity" >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/lesson03_btn_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Standard"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/lesson03_btn_singleTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Top"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/lesson03_btn_singleTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Task"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/lesson03_btn_singleInstance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Single Instance"
+        android:textAllCaps="false"/>
+
+    <TextView
+        android:id="@+id/lesson03_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>

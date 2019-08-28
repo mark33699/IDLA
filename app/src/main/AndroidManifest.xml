@@ -11,12 +11,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".Lesson04Activity"></activity>
-        <activity android:name=".Lesson03Activity" />
-        <activity android:name=".MainActivity">
+        <!-- Lesson03 -->
+        <activity android:name=".Lesson03.LaunchActivity"/>
+        <activity
+            android:name=".Lesson03.SingleInstanceLaunchActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name=".Lesson03.SingleTaskLaunchActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Lesson03.SingleTopLaunchActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Lesson03.StandardLaunchActivity"
+            android:launchMode="standard" />
+        <activity android:name=".Lesson03.Lesson03Activity" />
+        <activity android:name=".Lesson04Activity" />
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <!--只要加新的Activity, sync後, 這邊就一定會插個空行, 金變態-->
+                <!-- 只要加新的Activity, sync後, 這邊就一定會插個空行, 金變態 -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
