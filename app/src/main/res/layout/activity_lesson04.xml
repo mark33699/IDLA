@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.idla.Lesson04Activity">
+    android:orientation="vertical"
+    tools:context="com.example.idla.Lesson04.Lesson04Activity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/lesson04_btn_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Frame Layout"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/lesson04_btn_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/lesson04_btn_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Table Layout"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/lesson04_btn_absolute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Absolute Layout"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/lesson04_btn_constraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Constraint Layout"
+        android:textAllCaps="false" />
+</LinearLayout>

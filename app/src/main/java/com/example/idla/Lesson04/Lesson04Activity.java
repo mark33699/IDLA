@@ -1,10 +1,11 @@
-package com.example.idla;
+package com.example.idla.Lesson04;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.idla.BaseActivity;
+import com.example.idla.R;
 
-public class Lesson04Activity extends AppCompatActivity {
+public class Lesson04Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

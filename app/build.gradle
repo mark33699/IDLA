@@ -20,7 +20,7 @@ android {
     flavorDimensions ""
     productFlavors {
         v1 {
-            applicationId "test.idla1"
+            applicationId "com.example.idla1"
             buildConfigField "Boolean", "foo", "true"
         }
 

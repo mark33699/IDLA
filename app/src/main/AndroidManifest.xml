@@ -11,8 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <!-- Lesson03 -->
-        <activity android:name=".Lesson03.LaunchActivity"/>
+        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".Lesson04.ConstraintLayoutActivity" />
+        <activity android:name=".Lesson04.AbsoluteLayoutActivity" />
+        <activity android:name=".Lesson04.TableLayoutActivity" />
+        <activity android:name=".Lesson04.RelativeLayoutActivity" />
+        <activity android:name=".Lesson04.FrameLayoutActivity" /> <!-- Lesson03 -->
+        <activity android:name=".Lesson03.LaunchActivity" />
         <activity
             android:name=".Lesson03.SingleInstanceLaunchActivity"
             android:launchMode="singleInstance" />
@@ -26,8 +31,9 @@
             android:name=".Lesson03.StandardLaunchActivity"
             android:launchMode="standard" />
         <activity android:name=".Lesson03.Lesson03Activity" />
-        <activity android:name=".Lesson04Activity" />
-        <activity android:name=".MainActivity"
+        <activity android:name=".Lesson04.Lesson04Activity" />
+        <activity
+            android:name=".MainActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

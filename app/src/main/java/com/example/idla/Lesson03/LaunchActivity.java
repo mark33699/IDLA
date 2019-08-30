@@ -1,15 +1,14 @@
 package com.example.idla.Lesson03;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class LaunchActivity extends AppCompatActivity {
+public class LaunchActivity extends BaseActivity {
 
     private TextView textView;
     protected Button button;
@@ -19,8 +18,6 @@ public class LaunchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
-
-        this.setTitle(getIntent().getStringExtra("title"));
 
         linearLayout = findViewById(R.id.launch_linear_layout);
         button = findViewById(R.id.launch_btn);

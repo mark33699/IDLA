@@ -7,11 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class Lesson03Activity extends AppCompatActivity {
+public class Lesson03Activity extends BaseActivity {
 
     private Button btnStandard;
     private Button btnSingleTop;

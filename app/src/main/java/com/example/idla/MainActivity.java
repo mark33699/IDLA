@@ -11,6 +11,7 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.idla.Lesson03.Lesson03Activity;
+import com.example.idla.Lesson04.Lesson04Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,16 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                     {
                         Intent intent = new Intent(MainActivity.this, Lesson03Activity.class);//不能只寫.this
+                        intent.putExtra("title","Activity");
                         startActivity(intent);
+                        break;
+                    }
+                    case 1:
+                    {
+                        Intent intent = new Intent(MainActivity.this, Lesson04Activity.class);
+                        intent.putExtra("title","Layout");
+                        startActivity(intent);
+                        break;
                     }
                 }
             }
