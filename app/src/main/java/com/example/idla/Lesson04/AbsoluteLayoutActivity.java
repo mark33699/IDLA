@@ -4,9 +4,10 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class AbsoluteLayoutActivity extends AppCompatActivity {
+public class AbsoluteLayoutActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

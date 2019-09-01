@@ -2,10 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.idla.Lesson04.Lesson04Activity">
+
+    <TextView
+        android:id="@+id/lesson04_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is linear layout"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/lesson04_btn_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Relative Layout"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/lesson04_btn_absolute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Absolute Layout"
+        android:textAllCaps="false" />
 
     <Button
         android:id="@+id/lesson04_btn_frame"
@@ -13,28 +35,19 @@
         android:layout_height="wrap_content"
         android:text="Frame Layout"
         android:textAllCaps="false" />
-    <Button
-        android:id="@+id/lesson04_btn_relative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Relative Layout"
-        android:textAllCaps="false" />
+
     <Button
         android:id="@+id/lesson04_btn_table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Table Layout"
         android:textAllCaps="false" />
-    <Button
-        android:id="@+id/lesson04_btn_absolute"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Absolute Layout"
-        android:textAllCaps="false" />
+
     <Button
         android:id="@+id/lesson04_btn_constraint"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Constraint Layout"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:layout_gravity="center"/>
 </LinearLayout>

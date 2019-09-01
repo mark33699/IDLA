@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.idla.R;
 
-public class ConstraintLayoutActivity extends AppCompatActivity {
+public class ConstraintLayoutActivity extends com.example.idla.BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

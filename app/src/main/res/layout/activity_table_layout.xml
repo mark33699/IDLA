@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.idla.Lesson04.TableLayoutActivity">
+    tools:context="com.example.idla.Lesson04.TableLayoutActivity"
+    android:shrinkColumns="0"
+    android:collapseColumns="1"
+    android:stretchColumns="2"
+    >
+    <!--android:shrinkColumns那一欄是否會自動換行，不加的話字太多可能會擠到別欄無法出現-->
+    <!--android:collapseColumns可以把整欄都隱藏-->
+    <!--android:stretchColumns決定剩下的空間給哪一欄-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/tab_layout_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R1C1" />
+
+        <Button
+            android:id="@+id/tab_layout_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R1C2" />
+
+        <Button
+            android:id="@+id/tab_layout_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:text="R1C3" />
+        <!--layout_span讓button一格佔了兩欄-->
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/tab_layout_button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R2C1，雖然\nstretchColumns是第三欄，但如果字比較多的話還是以它為主" />
+        <!--然後同一欄的R1C1跟R3C1就一起變寬了-->
+        <Button
+            android:id="@+id/tab_layout_button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R2C2" />
+
+        <Button
+            android:id="@+id/tab_layout_button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R2C3" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/tab_layout_button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3C1" />
+
+        <Button
+            android:id="@+id/tab_layout_button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3C2" />
+
+        <Button
+            android:id="@+id/tab_layout_button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3C3" />
+
+        <Button
+            android:id="@+id/tab_layout_button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R3C4" />
+        <!--只有第三列是四欄，但這個表格就是3*4了-->
+
+    </TableRow>
+</TableLayout>

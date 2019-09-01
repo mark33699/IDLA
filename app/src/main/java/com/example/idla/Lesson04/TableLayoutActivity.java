@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.idla.R;
 
-public class TableLayoutActivity extends AppCompatActivity {
+public class TableLayoutActivity extends com.example.idla.BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
