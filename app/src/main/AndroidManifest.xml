@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".Lesson05.Lesson05Activity"></activity>
+        <activity android:name=".BaseActivity" />
         <activity android:name=".Lesson04.ConstraintLayoutActivity" />
         <activity android:name=".Lesson04.AbsoluteLayoutActivity" />
         <activity android:name=".Lesson04.TableLayoutActivity" />
