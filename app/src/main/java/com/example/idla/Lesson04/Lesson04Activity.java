@@ -64,13 +64,13 @@ public class Lesson04Activity extends BaseActivity {
             }
         });
 
-        buttonC = findViewById(R.id.lesson04_btn_constraint);
-        buttonC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(view, ConstraintLayoutActivity.class);
-            }
-        });
+//        buttonC = findViewById(R.id.lesson04_btn_constraint);
+//        buttonC.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(view, ConstraintLayoutActivity.class);
+//            }
+//        });
     }
 
     private void startActivity(View view, Class cls) {
