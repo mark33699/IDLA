@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.idla.Lesson04.ConstraintLayoutActivity">
+    tools:context="com.example.idla.Lesson05.ConstraintLayoutActivity">
 
     <Button
         android:id="@+id/button11"

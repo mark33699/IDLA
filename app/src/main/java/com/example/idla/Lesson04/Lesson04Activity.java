@@ -17,7 +17,6 @@ public class Lesson04Activity extends BaseActivity {
     private Button buttonF;
     private Button buttonA;
     private Button buttonT;
-    private Button buttonC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,14 +62,6 @@ public class Lesson04Activity extends BaseActivity {
                 startActivity(view, TableLayoutActivity.class);
             }
         });
-
-//        buttonC = findViewById(R.id.lesson04_btn_constraint);
-//        buttonC.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(view, ConstraintLayoutActivity.class);
-//            }
-//        });
     }
 
     private void startActivity(View view, Class cls) {

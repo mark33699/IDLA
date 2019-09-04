@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.idla.Lesson03.Lesson03Activity;
 import com.example.idla.Lesson04.Lesson04Activity;
+import com.example.idla.Lesson05.Lesson05Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     }
+                    case 2:
+                    {
+                        Intent intent = new Intent(MainActivity.this, Lesson05Activity.class);
+                        intent.putExtra("title","ConstraintLayout");
+                        startActivity(intent);
+                        break;
+                    }
                 }
             }
         });
@@ -66,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
         items = new ArrayList<>();
         items.add("Lesson 03 - Activity");
         items.add("Lesson 04 - Layout");
-        items.add("Lesson 05 - 必用元件");
-        items.add("Lesson 06 - 常用元件");
+        items.add("Lesson 05 - ConstraintLayout");
+        items.add("Lesson 06 - 必用元件");
+        items.add("Lesson 07 - 常用元件");
     }
 }

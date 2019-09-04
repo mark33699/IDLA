@@ -1,4 +1,4 @@
-package com.example.idla.Lesson04;
+package com.example.idla.Lesson05;
 
 import android.os.Bundle;
 import android.widget.TextView;
