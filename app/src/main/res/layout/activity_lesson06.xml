@@ -6,33 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.idla.Lesson06.Lesson06Activity">
 
-    <Button
-        android:id="@+id/button8"
+    <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="205dp" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="351dp" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/blue"
-        android:text="Button"
+        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
-
-
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-106dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
