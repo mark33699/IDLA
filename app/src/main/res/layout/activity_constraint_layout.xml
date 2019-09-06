@@ -114,10 +114,11 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginStart="64dp"
         android:background="@color/green"
         android:gravity="bottom"
         android:text="TextView"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-        tools:layout_editor_absoluteX="300dp" />
+        app:layout_constraintStart_toEndOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
