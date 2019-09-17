@@ -169,6 +169,7 @@ public class Lesson06Activity extends BaseActivity
         Dialog dialog = new AlertDialog.Builder(this)
 
             .setTitle("請輸入帳密")
+            .setMessage("帳號abc密碼123")
             .setView(viewLayout)
             .setPositiveButton("登入", new DialogInterface.OnClickListener() {
                 @Override

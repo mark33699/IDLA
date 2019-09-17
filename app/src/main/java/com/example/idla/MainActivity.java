@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 03 - Activity");
         titles.add("Lesson 04 - Layout");
         titles.add("Lesson 05 - ConstraintLayout");
-        titles.add("Lesson 06 - 必用元件");
-        titles.add("Lesson 07 - 常用元件");
+        titles.add("Lesson 06 - TextView/EditText/Button/Dialog");
+        titles.add("Lesson 07 - ImagePicker");
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
