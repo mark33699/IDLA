@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.example.idlaXXX" //Bundle ID
-        minSdkVersion 25 //Deployment Target
+        minSdkVersion 23 //Deployment Target
         targetSdkVersion 29
         versionCode 1 //Build
         versionName "1.0" //Version
@@ -42,4 +42,5 @@ dependencies {
     v1Implementation project(':idla1')
     v2Implementation project(':idla2')
     implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    implementation 'com.facebook.fresco:fresco:1.11.0'
 }

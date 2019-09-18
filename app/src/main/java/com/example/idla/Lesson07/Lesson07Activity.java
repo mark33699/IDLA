@@ -6,39 +6,56 @@ import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
-import android.media.ExifInterface; //這個找到的exif要嘛就0要嘛就null
+import android.media.ExifInterface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 
 import com.example.idla.BaseActivity;
 import com.example.idla.R;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+//import androidx.exifinterface.media.ExifInterface; //會FileNotFoundException
 //import android.support.media.ExifInterface //有這東東嗎？
-//import androidx.exifinterface.media.ExifInterface; //這個直接FileNotFoundException給你看
 
 public class Lesson07Activity extends BaseActivity {
 
     //static不行, 一定要final
     final int kCameraIntentRequestCode = 1000;
     final int kAlbumIntentRequestCode = 2000;
+    final int kFileIntentRequestCode = 3000;
 
     private ImageView imageView;// = findViewById(R.id.imageView4); //太早取了, 閃退要看Debug那邊
+    private SimpleDraweeView simpleDraweeView;
+    private FrameLayout frameLayout;
+    private String selectedImagePath;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson07);
+
         imageView = findViewById(R.id.imageView4);
+        frameLayout = findViewById(R.id.frame_layout1);
+
+//        Fresco.initialize(this);
+//        simpleDraweeView = new SimpleDraweeView(this); //直接閃退...
+//        simpleDraweeView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//        simpleDraweeView.setScaleType(ImageView.ScaleType.FIT_XY);
+//        simpleDraweeView.setBackgroundColor(getResources().getColor(R.color.green));
+//        frameLayout.addView(simpleDraweeView);
     }
 
     public void changeAvatar(View view)
@@ -62,7 +79,15 @@ public class Lesson07Activity extends BaseActivity {
                     startActivityForResult(intent,kAlbumIntentRequestCode);
                 }
             })
-            .setNeutralButton("放棄",null)
+            .setNeutralButton("檔案", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                    Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                    intent.setType("*/*");
+                    startActivityForResult(Intent.createChooser(intent, "Select Picture"), kFileIntentRequestCode);
+                }
+            })
             .create();
 
         dialog.show();
@@ -87,16 +112,25 @@ public class Lesson07Activity extends BaseActivity {
                 break;
             }
             case kAlbumIntentRequestCode:
+            case kFileIntentRequestCode:
             {
+
                 ContentResolver contentResolver = this.getContentResolver();
                 try
                 {
                     //要API28以上, 不然會閃
 //                    ImageDecoder.Source source = ImageDecoder.createSource(contentResolver,data.getData());
 //                    Bitmap bmp = ImageDecoder.decodeBitmap(source);
-                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
+
+//                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
+
 //                    imageView.setImageBitmap(bmp);
-                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(data.getData().getPath())));
+//                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(data.getData().getPath())));
+//                    simpleDraweeView.setImageURI(data.getData());
+
+                    selectedImagePath = getRealPathFromURIPath(data.getData(), this);
+                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
+                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(selectedImagePath)));
                 }
                 catch (FileNotFoundException e)
                 {
@@ -108,6 +142,21 @@ public class Lesson07Activity extends BaseActivity {
                 }
                 break;
             }
+        }
+    }
+
+    private String getRealPathFromURIPath(Uri contentURI, Activity activity)
+    {
+        Cursor cursor = activity.getContentResolver().query(contentURI, null, null, null, null);
+        if (cursor == null)
+        {
+            return contentURI.getPath();
+        }
+        else
+            {
+            cursor.moveToFirst();
+            int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
+            return cursor.getString(idx);
         }
     }
 
@@ -132,7 +181,7 @@ public class Lesson07Activity extends BaseActivity {
         int degree = 0;
         try {
             // 從指定路徑下讀取圖片，並獲取其EXIF資訊
-            ExifInterface exifInterface = new ExifInterface("content://media/external/images/media/606422");
+            ExifInterface exifInterface = new ExifInterface(path);
             // 獲取圖片的旋轉資訊
             int orientation = exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION,-1);
             Log.d("MF",exifInterface.getAttribute(ExifInterface.TAG_DATETIME) + "");
