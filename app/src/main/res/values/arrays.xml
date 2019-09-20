@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="constellation_type">
+        <item>請選擇星座類型</item>
+        <item>水象</item>
+        <item>火象</item>
+        <item>風象</item>
+        <item>土象</item>
+    </string-array>
+
+    <string-array name="constellation_water">
+        <item>請選擇星座</item>
+        <item>雙魚座(2/19-3/20)</item>
+        <item>巨蟹座(6/22-7/22)</item>
+        <item>天蠍座(10/24-11/22)	</item>
+    </string-array>
+
+    <string-array name="constellation_fire">
+        <item>請選擇星座</item>
+        <item>牧羊座(3/21-4/20)</item>
+        <item>獅子座(7/23-8/22)</item>
+        <item>射手座(11/23-12/21)	</item>
+    </string-array>
+
+    <string-array name="constellation_air">
+        <item>請選擇星座</item>
+        <item>水瓶座(1/20-2/18)</item>
+        <item>雙子座(5/21-6/21)</item>
+        <item>天秤座(9/23-10/23)</item>
+    </string-array>
+
+    <string-array name="constellation_earth">
+        <item>請選擇星座</item>
+        <item>金牛座(4/21-5/20)</item>
+        <item>處女座(8/23-9/22)</item>
+        <item>摩羯座(12/22-1/20)</item>
+    </string-array>
+
+    <!--<array name="constellation_total">-->
+        <!--<item>-->
+            <!--<string-array name="constellation_water">-->
+            <!--<item>雙魚座(2/19-3/20)</item>-->
+            <!--<item>巨蟹座(6/22-7/22)</item>-->
+            <!--<item>天蠍座(10/24-11/22)	</item>-->
+            <!--</string-array>-->
+        <!--</item>-->
+        <!--<item>-->
+            <!--<string-array name="constellation_fire">-->
+                <!--<item>牧羊座(3/21-4/20)</item>-->
+                <!--<item>獅子座(7/23-8/22)</item>-->
+                <!--<item>射手座(11/23-12/21)	</item>-->
+            <!--</string-array>-->
+        <!--</item>-->
+        <!--<item>-->
+            <!--<string-array name="constellation_air">-->
+                <!--<item>水瓶座(1/20-2/18)</item>-->
+                <!--<item>雙子座(5/21-6/21)</item>-->
+                <!--<item>天秤座(9/23-10/23)</item>-->
+            <!--</string-array>-->
+        <!--</item>-->
+        <!--<item>-->
+            <!--<string-array name="constellation_earth">-->
+                <!--<item>金牛座(4/21-5/20)</item>-->
+                <!--<item>處女座(8/23-9/22)</item>-->
+                <!--<item>摩羯座(12/22-1/20)</item>-->
+            <!--</string-array>-->
+        <!--</item>-->
+    <!--</array>-->
+</resources>

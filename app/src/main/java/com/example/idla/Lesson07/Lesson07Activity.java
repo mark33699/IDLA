@@ -131,6 +131,12 @@ public class Lesson07Activity extends BaseActivity {
                     selectedImagePath = getRealPathFromURIPath(data.getData(), this);
                     Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
                     imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(selectedImagePath)));
+
+                    //綠豆湯
+//                    String imagePath = cursor.getString(cursor.getColumnIndex(
+//                            MediaStore.Images.Media.DATA ));
+//                    Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
+//                    image.setImageBitmap(bitmap);
                 }
                 catch (FileNotFoundException e)
                 {
