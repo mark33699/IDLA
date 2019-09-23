@@ -1,4 +1,4 @@
-package com.example.idla.Lesson06;
+package com.example.idla.Lesson06_10;
 
 import android.app.Dialog;
 import android.content.DialogInterface;

@@ -41,6 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     v1Implementation project(':idla1')
     v2Implementation project(':idla2')
-    implementation 'androidx.exifinterface:exifinterface:1.0.0'
     implementation 'com.facebook.fresco:fresco:1.11.0'
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
 }

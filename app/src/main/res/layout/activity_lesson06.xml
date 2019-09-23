@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.idla.Lesson06.Lesson06Activity">
+    tools:context="com.example.idla.Lesson06_10.Lesson06Activity">
 
     <TextView
         android:id="@+id/textView7"

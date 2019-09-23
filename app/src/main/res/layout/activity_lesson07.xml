@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.idla.Lesson07.Lesson07Activity">
+    tools:context="com.example.idla.Lesson06_10.Lesson07Activity">
 
     <ImageView
         android:id="@+id/imageView4"

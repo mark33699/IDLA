@@ -13,9 +13,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.idla.Lesson03.Lesson03Activity;
 import com.example.idla.Lesson04.Lesson04Activity;
 import com.example.idla.Lesson05.Lesson05Activity;
-import com.example.idla.Lesson06.Lesson06Activity;
-import com.example.idla.Lesson07.Lesson07Activity;
-import com.example.idla.Lesson08.Lesson08Activity;
+import com.example.idla.Lesson06_10.Lesson06Activity;
+import com.example.idla.Lesson06_10.Lesson07Activity;
+import com.example.idla.Lesson06_10.Lesson08Activity;
+import com.example.idla.Lesson06_10.Lesson09Activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 06 - TextView/EditText/Button/Dialog");
         titles.add("Lesson 07 - ImagePicker");
         titles.add("Lesson 08 - Spinner/DatePickerDialog");
+        titles.add("Lesson 09 - 各種按鈕");
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson06Activity.class);
         classes.add(Lesson07Activity.class);
         classes.add(Lesson08Activity.class);
+        classes.add(Lesson09Activity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)

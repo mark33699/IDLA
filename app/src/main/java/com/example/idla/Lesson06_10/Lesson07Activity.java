@@ -1,4 +1,4 @@
-package com.example.idla.Lesson07;
+package com.example.idla.Lesson06_10;
 
 import android.app.Activity;
 import android.app.AlertDialog;

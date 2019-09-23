@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:focusableInTouchMode="true"
-    tools:context="com.example.idla.Lesson08.Lesson08Activity">
+    tools:context="com.example.idla.Lesson06_10.Lesson08Activity">
 
     <Spinner
         android:id="@+id/spinner"

@@ -1,4 +1,4 @@
-package com.example.idla.Lesson08;
+package com.example.idla.Lesson06_10;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
