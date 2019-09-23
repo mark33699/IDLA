@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.example.idlaXXX" //Bundle ID
         minSdkVersion 23 //Deployment Target
-        targetSdkVersion 29
+        targetSdkVersion 29 //原理說明https://www.race604.com/android-targetsdkversion/
         versionCode 1 //Build
         versionName "1.0" //Version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
