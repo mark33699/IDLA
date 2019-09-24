@@ -17,6 +17,7 @@ import com.example.idla.Lesson06_10.Lesson06Activity;
 import com.example.idla.Lesson06_10.Lesson07Activity;
 import com.example.idla.Lesson06_10.Lesson08Activity;
 import com.example.idla.Lesson06_10.Lesson09Activity;
+import com.example.idla.Lesson06_10.Lesson10Activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 07 - ImagePicker");
         titles.add("Lesson 08 - Spinner/DatePickerDialog");
         titles.add("Lesson 09 - 各種按鈕");
+        titles.add("Lesson 10 - SeekBar/ProgressBar");
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson07Activity.class);
         classes.add(Lesson08Activity.class);
         classes.add(Lesson09Activity.class);
+        classes.add(Lesson10Activity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)
