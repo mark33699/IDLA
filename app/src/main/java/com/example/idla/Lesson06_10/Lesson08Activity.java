@@ -171,7 +171,7 @@ public class Lesson08Activity extends AppCompatActivity {
         arrayList.add(Arrays.asList(getResources().getStringArray(R.array.constellation_fire)));
         arrayList.add(Arrays.asList(getResources().getStringArray(R.array.constellation_air)));
         arrayList.add(Arrays.asList(getResources().getStringArray(R.array.constellation_earth)));
-        //List list = Arrays.asList(getResources().getStringArray(R.array.constellation_total));//這樣會變成一維陣列...
+        List list = Arrays.asList(getResources().getStringArray(R.array.constellation_total));//這樣會變成一維陣列...
 
         arrayListColor = new ArrayList();
         arrayListColor.add(getResources().getColor(R.color.gray));

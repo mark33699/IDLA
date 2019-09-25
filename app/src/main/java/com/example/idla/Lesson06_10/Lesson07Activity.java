@@ -122,15 +122,15 @@ public class Lesson07Activity extends BaseActivity {
 //                    ImageDecoder.Source source = ImageDecoder.createSource(contentResolver,data.getData());
 //                    Bitmap bmp = ImageDecoder.decodeBitmap(source);
 
-//                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
+                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
 
-//                    imageView.setImageBitmap(bmp);
-//                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(data.getData().getPath())));
+                    imageView.setImageBitmap(bmp);
+                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(data.getData().getPath())));
 //                    simpleDraweeView.setImageURI(data.getData());
 
-                    selectedImagePath = getRealPathFromURIPath(data.getData(), this);
-                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
-                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(selectedImagePath)));
+//                    selectedImagePath = getRealPathFromURIPath(data.getData(), this);
+//                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
+//                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(selectedImagePath)));
 
                     //綠豆湯
 //                    String imagePath = cursor.getString(cursor.getColumnIndex(
@@ -241,5 +241,10 @@ public class Lesson07Activity extends BaseActivity {
             bitmap.recycle();
         }
         return bmp;
+    }
+
+    public void tryImageViewOnClick(View view)
+    {
+        changeAvatar(null);
     }
 }

@@ -57,7 +57,7 @@
         android:background="@android:drawable/edit_text"
         android:gravity="top"
         android:inputType="textMultiLine"
-        android:maxLines="10"
+        android:maxLines="6"
         android:minLines="3"
 
         android:scrollbars="vertical"
@@ -89,7 +89,8 @@
         android:text="我可以被鍵盤推"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView2"
