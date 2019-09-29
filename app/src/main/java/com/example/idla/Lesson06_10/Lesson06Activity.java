@@ -165,7 +165,7 @@ public class Lesson06Activity extends BaseActivity
     public void inputDialog(View view)
     {
         LayoutInflater layoutInflater = getLayoutInflater();
-        final View viewLayout = layoutInflater.inflate(R.layout.login_layout,null);
+        final View viewLayout = layoutInflater.inflate(R.layout.alert_login,null);
         Dialog dialog = new AlertDialog.Builder(this)
 
             .setTitle("請輸入帳密")
