@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="red"
+        android:icon="@color/red"
+        android:id="@+id/bottom_navi_red"/>
+    <!--<item android:title="orange"-->
+        <!--android:icon="@color/red"-->
+        <!--android:id="@+id/bottom_navi_orange" />-->
+    <item android:title="yellow"
+        android:icon="@color/red"
+        android:id="@+id/bottom_navi_yellow" />
+    <item android:title="green"
+        android:icon="@color/red"
+        android:id="@+id/bottom_navi_green" />
+    <!--<item android:title="blue"-->
+        <!--android:icon="@color/red"-->
+        <!--android:id="@+id/bottom_navi_blue" />-->
+    <!--<item android:title="indigo"-->
+        <!--android:icon="@color/red"-->
+        <!--android:id="@+id/bottom_navi_indigo" />-->
+    <!--<item android:title="purple"-->
+        <!--android:icon="@color/red"-->
+        <!--android:id="@+id/bottom_navi_purple" />-->
+</menu>

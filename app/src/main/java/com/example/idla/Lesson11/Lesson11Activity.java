@@ -23,9 +23,9 @@ public class Lesson11Activity extends AppCompatActivity
         setContentView(R.layout.activity_lesson11);
 
         recyclerView = findViewById(R.id.recycleView_staff);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));//決定要列表或格子
         recyclerView.setAdapter(new Lesson11Adapter(new ArrayList()));
-        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));//分隔線
     }
 
     public void reload(View view)

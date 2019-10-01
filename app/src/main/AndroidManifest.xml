@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".Lesson11.Lesson11Activity"></activity>
+        <activity android:name=".Lesson12.Lesson12Activity"></activity>
+        <activity android:name=".Lesson11.Lesson11Activity" />
         <activity android:name=".Lesson06_10.Lesson10Activity" />
         <activity android:name=".Lesson06_10.Lesson09Activity" />
         <activity android:name=".Lesson06_10.Lesson08Activity" />
