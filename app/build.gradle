@@ -45,4 +45,5 @@ dependencies {
     implementation 'com.facebook.fresco:fresco:1.11.0'
     implementation 'androidx.exifinterface:exifinterface:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation("com.squareup.okhttp3:okhttp:4.2.1")
 }

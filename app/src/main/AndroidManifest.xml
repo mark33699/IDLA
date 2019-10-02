@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.idla">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".Lesson12.Lesson12Activity"></activity>
+        <activity android:name=".Lesson13.Lesson13Activity"></activity>
+        <activity android:name=".Lesson12.Lesson12Activity" />
         <activity android:name=".Lesson11.Lesson11Activity" />
         <activity android:name=".Lesson06_10.Lesson10Activity" />
         <activity android:name=".Lesson06_10.Lesson09Activity" />
