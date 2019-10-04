@@ -2,7 +2,6 @@ package com.example.idla.Lesson13;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -54,8 +53,6 @@ public class Lesson13Activity extends AppCompatActivity
         progressBar.setVisibility(View.VISIBLE);
         callPOST("https://reqres.in/api/register");
 
-//        callGET("https://reqres.in/api/users/2");
-
         //官方的範例會閃退= =
 //        String result = "";
 //        try {
@@ -106,31 +103,6 @@ public class Lesson13Activity extends AppCompatActivity
                         progressBar.setVisibility(View.INVISIBLE);
                     }
                 });
-            }
-        });
-    }
-
-    void callGET(String url)
-    {
-        Request request = new Request.Builder()
-                .url(url)
-                .build();
-
-        Call call = client.newCall(request);
-
-        call.enqueue(new Callback()
-        {
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException
-            {
-                String result = response.body().string();
-                Log.d("MF", result);
-            }
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e)
-            {
-
-                Log.d("MF","OkHttp failure");
             }
         });
     }
