@@ -19,4 +19,6 @@
     <string name="title_activity_lesson15_tabbed">Lesson15TabbedActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_list">Activitys</string>
+    <string name="title_activity_detail">Activity Detail</string>
 </resources>
