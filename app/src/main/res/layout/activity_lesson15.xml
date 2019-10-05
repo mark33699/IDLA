@@ -6,11 +6,86 @@
     android:layout_height="match_parent"
     tools:context="com.example.idla.Lesson15.Lesson15Activity">
 
-    <Button
-        android:id="@+id/button19"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="156dp"
-        tools:layout_editor_absoluteY="87dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Drawer"
+        android:textAllCaps="false"
+        android:background="@color/red"
+        android:onClick="goToDrawer"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Tabbed"
+        android:textAllCaps="false"
+        android:background="@color/green"
+        android:onClick="goToTabbed"
+        app:layout_constraintStart_toEndOf="@id/guidelineV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Master/Detail"
+        android:textAllCaps="false"
+        android:background="@color/blue"
+        android:onClick="goToMasterDetail"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineH"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/button23"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="FullScreen"
+        android:textAllCaps="false"
+        android:background="@color/yellow"
+        android:onClick="goToFullScreen"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineH"
+        app:layout_constraintStart_toEndOf="@+id/guidelineV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

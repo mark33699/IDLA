@@ -21,4 +21,8 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_list">Activitys</string>
     <string name="title_activity_detail">Activity Detail</string>
+
+    <string name="title_activity_lesson15_fullscreen">Lesson15FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

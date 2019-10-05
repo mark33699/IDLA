@@ -14,9 +14,14 @@
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
         <activity
+            android:name=".Lesson15.Lesson15FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_lesson15_fullscreen"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity
             android:name=".Lesson15.ActivityListActivity"
             android:label="@string/title_activity_list"
-            android:theme="@style/AppThemeDefault.NoActionBar"></activity>
+            android:theme="@style/AppThemeDefault.NoActionBar" />
         <activity
             android:name=".Lesson15.ActivityDetailActivity"
             android:label="@string/title_activity_detail"

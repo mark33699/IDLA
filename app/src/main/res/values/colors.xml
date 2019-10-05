@@ -12,4 +12,6 @@
     <color name="red">#e53331</color>
     <color name="white">#ffffff</color>
     <color name="black">#111111</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>
