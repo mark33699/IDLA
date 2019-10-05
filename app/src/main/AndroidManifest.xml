@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".Lesson14.Lesson14Activity"></activity>
+        <activity
+            android:name=".Lesson15.Lesson15Activity"
+            android:label="@string/title_activity_lesson15"
+            android:theme="@style/AppThemeDefault.NoActionBar"></activity>
+        <activity android:name=".Lesson14.Lesson14Activity" />
         <activity android:name=".Lesson13.Lesson13Activity" />
         <activity android:name=".Lesson12.Lesson12Activity" />
         <activity android:name=".Lesson11.Lesson11Activity" />

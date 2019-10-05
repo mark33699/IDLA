@@ -15,4 +15,13 @@
         <item name="colorAccent">@color/blue</item>
     </style>
 
+    <style name="AppThemeDefault.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemeDefault.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeDefault.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
