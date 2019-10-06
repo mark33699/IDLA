@@ -23,6 +23,7 @@ import com.example.idla.Lesson12.Lesson12Activity;
 import com.example.idla.Lesson13.Lesson13Activity;
 import com.example.idla.Lesson14.Lesson14Activity;
 import com.example.idla.Lesson15.Lesson15Activity;
+import com.example.idla.Lesson16.Lesson16Activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 13 - call API");
         titles.add("Lesson 14 - JSON to Model");
         titles.add("Lesson 15 - Activity Gallery");
+        titles.add("Lesson 16 - 指紋辨識");
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson13Activity.class);
         classes.add(Lesson14Activity.class);
         classes.add(Lesson15Activity.class);
+        classes.add(Lesson16Activity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)
