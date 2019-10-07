@@ -24,6 +24,7 @@ import com.example.idla.Lesson13.Lesson13Activity;
 import com.example.idla.Lesson14.Lesson14Activity;
 import com.example.idla.Lesson15.Lesson15Activity;
 import com.example.idla.Lesson16.Lesson16Activity;
+import com.example.idla.Lesson17.Lesson17Activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -62,24 +63,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+//        ActivityCompat.requestPermissions(this,new String[]{"android.permission.ACCESS_FINE_LOCATION"}, 666);
+
     }
 
     private void setupData() {
         titles = new ArrayList<>();
-        titles.add("Lesson 03 - Activity");
-        titles.add("Lesson 04 - Layout");
-        titles.add("Lesson 05 - ConstraintLayout");
-        titles.add("Lesson 06 - TextView/EditText/Button/Dialog");
-        titles.add("Lesson 07 - ImagePicker");
-        titles.add("Lesson 08 - Spinner/DatePickerDialog");
-        titles.add("Lesson 09 - 各種按鈕");
-        titles.add("Lesson 10 - SeekBar/ProgressBar");
-        titles.add("Lesson 11 - RecycleView");
-        titles.add("Lesson 12 - BottomNavigation");
-        titles.add("Lesson 13 - call API");
-        titles.add("Lesson 14 - JSON to Model");
-        titles.add("Lesson 15 - Activity Gallery");
-        titles.add("Lesson 16 - 指紋辨識");
+        titles.add("Lesson 01 - Activity");
+        titles.add("Lesson 02 - Layout");
+        titles.add("Lesson 03 - ConstraintLayout");
+        titles.add("Lesson 04 - TextView/EditText/Button/Dialog");
+        titles.add("Lesson 05 - ImagePicker");
+        titles.add("Lesson 06 - Spinner/DatePickerDialog");
+        titles.add("Lesson 07 - 各種按鈕");
+        titles.add("Lesson 08 - SeekBar/ProgressBar");
+        titles.add("Lesson 09 - RecycleView");
+        titles.add("Lesson 10 - BottomNavigation");
+        titles.add("Lesson 11 - call API");
+        titles.add("Lesson 12 - JSON to Model");
+        titles.add("Lesson 13 - Activity Gallery");
+        titles.add("Lesson 14 - 指紋辨識");
+        titles.add("Lesson 15 - Google Map");
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
@@ -96,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson14Activity.class);
         classes.add(Lesson15Activity.class);
         classes.add(Lesson16Activity.class);
+        classes.add(Lesson17Activity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)
