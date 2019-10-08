@@ -15,8 +15,11 @@
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
         <activity
+            android:name=".Lesson18.Login.ui.login.Lessoon18LoginActivity"
+            android:label="@string/title_activity_lesson18_login"></activity>
+        <activity
             android:name=".Lesson18.Register.ui.login.Lesson18RegisterActivity"
-            android:label="@string/title_activity_lesson18_register"></activity>
+            android:label="@string/title_activity_lesson18_register" />
         <activity android:name=".Lesson16.Lesson16Activity" />
         <activity
             android:name=".Lesson15.Lesson15FullscreenActivity"
