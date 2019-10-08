@@ -1,4 +1,4 @@
-package com.example.idla.Lesson18.data;
+package com.example.idla.Lesson18.Register.data;
 
 /**
  * A generic class that holds a result success w/ data or an error exception.

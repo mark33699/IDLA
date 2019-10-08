@@ -1,4 +1,4 @@
-package com.example.idla.Lesson18.ui.login;
+package com.example.idla.Lesson18.Register.ui.login;
 
 import androidx.annotation.Nullable;
 

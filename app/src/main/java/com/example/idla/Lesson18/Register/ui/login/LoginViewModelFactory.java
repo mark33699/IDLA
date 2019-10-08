@@ -1,11 +1,11 @@
-package com.example.idla.Lesson18.ui.login;
+package com.example.idla.Lesson18.Register.ui.login;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.annotation.NonNull;
 
-import com.example.idla.Lesson18.data.LoginDataSource;
-import com.example.idla.Lesson18.data.LoginRepository;
+import com.example.idla.Lesson18.Register.data.LoginDataSource;
+import com.example.idla.Lesson18.Register.data.LoginRepository;
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

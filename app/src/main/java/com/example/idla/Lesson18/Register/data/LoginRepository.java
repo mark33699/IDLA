@@ -1,6 +1,6 @@
-package com.example.idla.Lesson18.data;
+package com.example.idla.Lesson18.Register.data;
 
-import com.example.idla.Lesson18.data.model.LoggedInUser;
+import com.example.idla.Lesson18.Register.data.model.LoggedInUser;
 
 /**
  * Class that requests authentication and user information from the remote data source and

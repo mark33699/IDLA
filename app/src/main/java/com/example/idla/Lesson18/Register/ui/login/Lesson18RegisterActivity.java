@@ -1,4 +1,4 @@
-package com.example.idla.Lesson18.ui.login;
+package com.example.idla.Lesson18.Register.ui.login;
 
 import android.app.Activity;
 
@@ -22,11 +22,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.idla.Lesson18.R;
-import com.example.idla.Lesson18.ui.login.LoginViewModel;
-import com.example.idla.Lesson18.ui.login.LoginViewModelFactory;
+import com.example.idla.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class Lesson18RegisterActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
 

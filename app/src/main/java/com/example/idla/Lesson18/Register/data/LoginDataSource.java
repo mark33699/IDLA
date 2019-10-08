@@ -1,6 +1,6 @@
-package com.example.idla.Lesson18.data;
+package com.example.idla.Lesson18.Register.data;
 
-import com.example.idla.Lesson18.data.model.LoggedInUser;
+import com.example.idla.Lesson18.Register.data.model.LoggedInUser;
 
 import java.io.IOException;
 

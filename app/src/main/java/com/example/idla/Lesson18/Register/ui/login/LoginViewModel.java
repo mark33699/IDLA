@@ -1,4 +1,4 @@
-package com.example.idla.Lesson18.ui.login;
+package com.example.idla.Lesson18.Register.ui.login;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel;
 
 import android.util.Patterns;
 
-import com.example.idla.Lesson18.data.LoginRepository;
-import com.example.idla.Lesson18.data.Result;
-import com.example.idla.Lesson18.data.model.LoggedInUser;
-import com.example.idla.Lesson18.R;
+import com.example.idla.Lesson18.Register.data.LoginRepository;
+import com.example.idla.Lesson18.Register.data.Result;
+import com.example.idla.Lesson18.Register.data.model.LoggedInUser;
+import com.example.idla.R;
 
 public class LoginViewModel extends ViewModel {
 
