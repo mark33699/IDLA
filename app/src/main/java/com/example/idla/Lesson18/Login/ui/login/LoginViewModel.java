@@ -9,7 +9,7 @@ import android.util.Patterns;
 import com.example.idla.Lesson18.Login.data.LoginRepository;
 import com.example.idla.Lesson18.Login.data.Result;
 import com.example.idla.Lesson18.Login.data.model.LoggedInUser;
-import com.example.idla.Lesson18.Login.R;
+import com.example.idla.R;
 
 public class LoginViewModel extends ViewModel {
 

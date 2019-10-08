@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -21,6 +22,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.idla.Lesson18.Login.ui.login.Lessoon18LoginActivity;
 
 import com.example.idla.R;
 
@@ -71,8 +73,7 @@ public class Lesson18RegisterActivity extends AppCompatActivity {
                 }
                 setResult(Activity.RESULT_OK);
 
-                //Complete and destroy login activity once successful
-                finish();
+                login(null);
             }
         });
 
@@ -125,5 +126,11 @@ public class Lesson18RegisterActivity extends AppCompatActivity {
 
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    }
+
+    public void login(View view)
+    {
+        Intent intent = new Intent(Lesson18RegisterActivity.this, Lessoon18LoginActivity.class);
+        startActivity(intent);
     }
 }

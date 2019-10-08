@@ -24,6 +24,7 @@ import com.example.idla.Lesson13.Lesson13Activity;
 import com.example.idla.Lesson14.Lesson14Activity;
 import com.example.idla.Lesson15.Lesson15Activity;
 import com.example.idla.Lesson16.Lesson16Activity;
+import com.example.idla.Lesson18.Login.ui.login.Lessoon18LoginActivity;
 import com.example.idla.Lesson18.Register.ui.login.Lesson18RegisterActivity;
 
 import java.util.ArrayList;
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        Intent intent = new Intent(this, Lessoon18LoginActivity.class);
 
     }
 
