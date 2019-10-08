@@ -1,17 +1,11 @@
 package com.example.idla.Lesson18.Login.ui.login;
 
 import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
@@ -21,6 +15,12 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.idla.R;
 
@@ -63,16 +63,30 @@ public class Lessoon18LoginActivity extends AppCompatActivity {
                     return;
                 }
                 loadingProgressBar.setVisibility(View.GONE);
-                if (loginResult.getError() != null) {
-                    showLoginFailed(loginResult.getError());
-                }
-                if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
-                }
-                setResult(Activity.RESULT_OK);
 
-                //Complete and destroy login activity once successful
-                finish();
+//                if (loginResult.getError() != null) {
+//                    showLoginFailed(loginResult.getError());
+//                }
+//                if (loginResult.getSuccess() != null) {
+//                    updateUiWithUser(loginResult.getSuccess());
+//                }
+
+                SharedPreferences sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
+                String password = sharedPreferences.getString(usernameEditText.getText().toString(),"default");
+                if (TextUtils.equals(password,passwordEditText.getText().toString()))//用這個就算字串是null也不會閃退
+                {
+                    updateUiWithUser(loginResult.getSuccess());
+                    Intent intent = new Intent();
+                    intent.putExtra("isBackByLoginSuccess",true);
+                    setResult(Activity.RESULT_OK, intent);
+                    finish();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"帳密錯誤",Toast.LENGTH_LONG).show();
+                }
+
+                setResult(Activity.RESULT_OK);
             }
         });
 
@@ -118,7 +132,7 @@ public class Lessoon18LoginActivity extends AppCompatActivity {
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
+        String welcome = model.getDisplayName() + getString(R.string.welcome_login);
         // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }

@@ -1,17 +1,9 @@
 package com.example.idla.Lesson18.Register.ui.login;
 
 import android.app.Activity;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
@@ -22,8 +14,14 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.example.idla.Lesson18.Login.ui.login.Lessoon18LoginActivity;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+
+import com.example.idla.Lesson18.Login.ui.login.Lessoon18LoginActivity;
 import com.example.idla.R;
 
 public class Lesson18RegisterActivity extends AppCompatActivity {
@@ -65,15 +63,32 @@ public class Lesson18RegisterActivity extends AppCompatActivity {
                     return;
                 }
                 loadingProgressBar.setVisibility(View.GONE);
-                if (loginResult.getError() != null) {
-                    showLoginFailed(loginResult.getError());
-                }
-                if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
-                }
+//                if (loginResult.getError() != null) {
+//                    showLoginFailed(loginResult.getError());
+//                }
+//                if (loginResult.getSuccess() != null) {
+//                    updateUiWithUser(loginResult.getSuccess());
+//                }
                 setResult(Activity.RESULT_OK);
 
-                login(null);
+                SharedPreferences sharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
+                String password = sharedPreferences.getString(usernameEditText.getText().toString(),"");
+                if (password.equals(""))
+                {
+                    updateUiWithUser(loginResult.getSuccess());
+
+                    SharedPreferences.Editor spEditor = sharedPreferences.edit();
+                    spEditor.putString(usernameEditText.getText().toString(), passwordEditText.getText().toString());
+                    spEditor.commit();
+
+                    Intent intent = new Intent(Lesson18RegisterActivity.this, Lessoon18LoginActivity.class);
+
+                    login(null);
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"該帳號已被註冊",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -119,7 +134,7 @@ public class Lesson18RegisterActivity extends AppCompatActivity {
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
+        String welcome = model.getDisplayName() + getString(R.string.welcome_register);
         // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
@@ -131,6 +146,17 @@ public class Lesson18RegisterActivity extends AppCompatActivity {
     public void login(View view)
     {
         Intent intent = new Intent(Lesson18RegisterActivity.this, Lessoon18LoginActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent,88);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (data != null && data.getBooleanExtra("isBackByLoginSuccess",false))
+        {
+            finish();
+        }
     }
 }
