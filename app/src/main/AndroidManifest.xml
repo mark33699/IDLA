@@ -20,6 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+<<<<<<< HEAD
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -36,6 +37,14 @@
         <activity
             android:name=".Lesson17.Lesson17Activity"
             android:label="@string/title_activity_lesson17"></activity>
+=======
+        <activity
+            android:name=".Lesson18.Login.ui.login.Lessoon18LoginActivity"
+            android:label="@string/title_activity_lesson18_login"></activity>
+        <activity
+            android:name=".Lesson18.Register.ui.login.Lesson18RegisterActivity"
+            android:label="@string/title_activity_lesson18_register" />
+>>>>>>> 1e949bb0455145c5a87bcd664e3e0d14c04cd394
         <activity android:name=".Lesson16.Lesson16Activity" />
         <activity
             android:name=".Lesson15.Lesson15FullscreenActivity"

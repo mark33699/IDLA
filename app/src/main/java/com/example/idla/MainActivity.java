@@ -24,7 +24,12 @@ import com.example.idla.Lesson13.Lesson13Activity;
 import com.example.idla.Lesson14.Lesson14Activity;
 import com.example.idla.Lesson15.Lesson15Activity;
 import com.example.idla.Lesson16.Lesson16Activity;
+<<<<<<< HEAD
 import com.example.idla.Lesson17.Lesson17Activity;
+=======
+import com.example.idla.Lesson18.Login.ui.login.Lessoon18LoginActivity;
+import com.example.idla.Lesson18.Register.ui.login.Lesson18RegisterActivity;
+>>>>>>> 1e949bb0455145c5a87bcd664e3e0d14c04cd394
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -63,13 +68,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
 
 //        ActivityCompat.requestPermissions(this,new String[]{"android.permission.ACCESS_FINE_LOCATION"}, 666);
+=======
+        Intent intent = new Intent(this, Lessoon18LoginActivity.class);
+>>>>>>> 1e949bb0455145c5a87bcd664e3e0d14c04cd394
 
     }
 
     private void setupData() {
         titles = new ArrayList<>();
+<<<<<<< HEAD
         titles.add("Lesson 01 - Activity");
         titles.add("Lesson 02 - Layout");
         titles.add("Lesson 03 - ConstraintLayout");
@@ -85,6 +95,23 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 13 - Activity Gallery");
         titles.add("Lesson 14 - 指紋辨識");
         titles.add("Lesson 15 - Google Map");
+=======
+        titles.add("Lesson 03 - Activity");
+        titles.add("Lesson 04 - Layout");
+        titles.add("Lesson 05 - ConstraintLayout");
+        titles.add("Lesson 06 - TextView/EditText/Button/Dialog");
+        titles.add("Lesson 07 - ImagePicker");
+        titles.add("Lesson 08 - Spinner/DatePickerDialog");
+        titles.add("Lesson 09 - 各種按鈕");
+        titles.add("Lesson 10 - SeekBar/ProgressBar");
+        titles.add("Lesson 11 - RecycleView");
+        titles.add("Lesson 12 - BottomNavigation");
+        titles.add("Lesson 13 - call API");
+        titles.add("Lesson 14 - JSON to Model");
+        titles.add("Lesson 15 - Activity Gallery");
+        titles.add("Lesson 16 - 指紋辨識");
+        titles.add("Lesson 18 - 本地儲存");
+>>>>>>> 1e949bb0455145c5a87bcd664e3e0d14c04cd394
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
@@ -101,7 +128,11 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson14Activity.class);
         classes.add(Lesson15Activity.class);
         classes.add(Lesson16Activity.class);
+<<<<<<< HEAD
         classes.add(Lesson17Activity.class);
+=======
+        classes.add(Lesson18RegisterActivity.class);
+>>>>>>> 1e949bb0455145c5a87bcd664e3e0d14c04cd394
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)
