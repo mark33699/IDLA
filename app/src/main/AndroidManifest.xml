@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.idla">
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!--地圖定位-->
-    <uses-permission android:name="android.permission.INTERNET" /> <!--打API-->
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" /> <!--指紋辨識-->
+    <!-- 地圖定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 打API -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 指紋辨識 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
         android:allowBackup="true"
@@ -20,6 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".Lesson19.Lesson19Activity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -27,10 +26,10 @@
 
         <activity
             android:name=".Lesson17.Lesson17Activity"
-            android:label="@string/title_activity_lesson17"></activity>
+            android:label="@string/title_activity_lesson17" />
         <activity
             android:name=".Lesson18.Login.ui.login.Lessoon18LoginActivity"
-            android:label="@string/title_activity_lesson18_login"></activity>
+            android:label="@string/title_activity_lesson18_login" />
         <activity
             android:name=".Lesson18.Register.ui.login.Lesson18RegisterActivity"
             android:label="@string/title_activity_lesson18_register" />

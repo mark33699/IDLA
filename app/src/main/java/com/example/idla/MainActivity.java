@@ -26,6 +26,7 @@ import com.example.idla.Lesson15.Lesson15Activity;
 import com.example.idla.Lesson16.Lesson16Activity;
 import com.example.idla.Lesson17.Lesson17Activity;
 import com.example.idla.Lesson18.Register.ui.login.Lesson18RegisterActivity;
+import com.example.idla.Lesson19.Lesson19Activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 14 - 指紋辨識");
         titles.add("Lesson 15 - Google Map");
         titles.add("Lesson 16 - 本地儲存");
+        titles.add("Lesson 17 - Room");
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
@@ -101,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson16Activity.class);
         classes.add(Lesson17Activity.class);
         classes.add(Lesson18RegisterActivity.class);
+        classes.add(Lesson19Activity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)
