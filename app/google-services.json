@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "115124771962",
+    "firebase_url": "https://idla-e37b9.firebaseio.com",
+    "project_id": "idla-e37b9",
+    "storage_bucket": "idla-e37b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115124771962:android:98054a33e7c2191c476fc3",
+        "android_client_info": {
+          "package_name": "com.example.idla1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "115124771962-r20189t93d4n53ml7dsr7pi7im405o8a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.idla1",
+            "certificate_hash": "d5372dc3493472518d0097c1af3de94a142bfb70"
+          }
+        },
+        {
+          "client_id": "115124771962-56pccq13oc4b8b3e6g1mqo50fsp4u81o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTrMp5yIbPHLpB6p25Gl9zO5S6NKXekqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115124771962-56pccq13oc4b8b3e6g1mqo50fsp4u81o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
