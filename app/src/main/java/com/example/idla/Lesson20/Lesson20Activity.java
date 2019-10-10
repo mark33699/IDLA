@@ -19,6 +19,8 @@ public class Lesson20Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson20);
 
+        getSupportActionBar().hide();//NoActionBar時會閃退
+
         toolbarNewX = findViewById(R.id.mark_tool_bar);
         toolbarNewX.inflateMenu(R.menu.action_bar);
         toolbarNewX.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener()
@@ -30,7 +32,7 @@ public class Lesson20Activity extends AppCompatActivity
             }
         });
 
-        setSupportActionBar(toolbarNewX);
+//        setSupportActionBar(toolbarNewX); //有指定右上角會不見???
 //        getSupportActionBar().setDisplayShowTitleEnabled(true);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setHomeButtonEnabled(true);
