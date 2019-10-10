@@ -19,8 +19,6 @@ public class Lesson20Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson20);
 
-        getSupportActionBar().hide();
-
         toolbarNewX = findViewById(R.id.mark_tool_bar);
         toolbarNewX.inflateMenu(R.menu.action_bar);
         toolbarNewX.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener()
@@ -31,7 +29,8 @@ public class Lesson20Activity extends AppCompatActivity
                 return true;
             }
         });
-//        setSupportActionBar(toolbarNewX);
+
+        setSupportActionBar(toolbarNewX);
 //        getSupportActionBar().setDisplayShowTitleEnabled(true);
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 //        getSupportActionBar().setHomeButtonEnabled(true);

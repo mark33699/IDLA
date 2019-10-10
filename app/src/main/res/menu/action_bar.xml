@@ -2,8 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/tank"
         android:orderInCategory="100"
         android:title="@string/action_settings"
+        android:icon="@drawable/tank"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/playstation"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:icon="@drawable/playstation"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/radioactive"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:icon="@drawable/radioactive"
+        app:showAsAction="always" />
+
+    <!--<item-->
+        <!--android:id="@id/action_notification"-->
+        <!--android:icon="@mipmap/ic_notifications"-->
+        <!--android:title="@string/menu_notifications"-->
+        <!--app:showAsAction="ifRoom" />-->
 </menu>

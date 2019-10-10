@@ -12,10 +12,9 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mark_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         app:subtitle="罷了吧"
-        app:navigationIcon="@drawable/apple2019samll"
-        app:logo="@drawable/avatar"
+        app:navigationIcon="@drawable/chess_knight"
         android:background="@color/blue"
         />
 
