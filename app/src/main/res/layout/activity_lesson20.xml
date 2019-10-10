@@ -9,6 +9,16 @@
     android:background="@color/red"
     tools:context="com.example.idla.Lesson20.Lesson20Activity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mark_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:subtitle="罷了吧"
+        app:navigationIcon="@drawable/apple2019samll"
+        app:logo="@drawable/avatar"
+        android:background="@color/blue"
+        />
+
     <Button
         android:id="@+id/button25"
         android:layout_width="match_parent"
@@ -18,18 +28,11 @@
         android:onClick="noActionBar"/>
 
     <Button
-        android:id="@+id/button26"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="DefaultActionBar"
-        android:onClick="defaultActionBar"/>
-
-    <Button
         android:id="@+id/button27"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="NewActionBar"
         android:onClick="newActionBar"/>
+
 </LinearLayout>

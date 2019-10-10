@@ -1,18 +1,17 @@
 package com.example.idla.Lesson20;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.idla.R;
 
 public class Lesson20Activity extends AppCompatActivity
 {
-    android.widget.Toolbar toolbarNew;
     androidx.appcompat.widget.Toolbar toolbarNewX;
-    ActionBar actionBarDefault;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,9 +19,22 @@ public class Lesson20Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson20);
 
-        actionBarDefault = getSupportActionBar();
-        toolbarNew = findViewById(R.id.toolbar);
-        toolbarNewX = findViewById(R.id.toolbar);
+        getSupportActionBar().hide();
+
+        toolbarNewX = findViewById(R.id.mark_tool_bar);
+        toolbarNewX.inflateMenu(R.menu.action_bar);
+        toolbarNewX.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener()
+        {
+            @Override
+            public boolean onMenuItemClick(MenuItem item)
+            {
+                return true;
+            }
+        });
+//        setSupportActionBar(toolbarNewX);
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     public void noActionBar(View view)
@@ -30,18 +42,8 @@ public class Lesson20Activity extends AppCompatActivity
         getSupportActionBar().hide();
     }
 
-    public void defaultActionBar(View view)
-    {
-//        setSupportActionBar(actionBarDefault);
-        getSupportActionBar().show();
-    }
-
     public void newActionBar(View view)
     {
-        setSupportActionBar(toolbarNewX);
         getSupportActionBar().show();
-
-//        setActionBar(toolbarNew);
-//        getActionBar().show();
     }
 }
