@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:title="標題"
+    android:subtitle="子標題"
+    android:navigationIcon="@drawable/apple2019gold"
+    android:logo="@drawable/apple2019gold"
+    android:background="@color/blue">
+
+</Toolbar>

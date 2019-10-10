@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    tools:context="com.example.idla.Lesson20.Lesson20Activity">
+
+    <Button
+        android:id="@+id/button25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="NoActionBar"
+        android:onClick="noActionBar"/>
+
+    <Button
+        android:id="@+id/button26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="DefaultActionBar"
+        android:onClick="defaultActionBar"/>
+
+    <Button
+        android:id="@+id/button27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="NewActionBar"
+        android:onClick="newActionBar"/>
+</LinearLayout>
