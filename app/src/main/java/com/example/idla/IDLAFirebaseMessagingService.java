@@ -1,6 +1,12 @@
 package com.example.idla;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Intent;
 import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
@@ -46,9 +52,29 @@ public class IDLAFirebaseMessagingService extends FirebaseMessagingService
         if (remoteMessage.getNotification() != null)
         {
             Log.d("MF❤️", "Message Notification Body: " + remoteMessage.getNotification().getBody());
+
+            RemoteMessage.Notification remoteNotif = remoteMessage.getNotification();
+
+            Notification notif = new NotificationCompat.Builder(this,"NotificationChannelID")
+                    .setSmallIcon(R.drawable.chess_knight)
+                    .setContentTitle(remoteNotif.getTitle())
+                    .setContentText(remoteNotif.getBody())
+                    .build();
+
+            NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            notificationManager.notify(999,notif);
+
+            broadcast(remoteNotif.getBody());
         }
 
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
+    }
+
+    private void broadcast(String message)
+    {
+        Intent intent = new Intent("FCM");
+        intent.putExtra("notifi",message);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
     }
 }

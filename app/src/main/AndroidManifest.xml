@@ -6,15 +6,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 地圖定位 -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 打API -->
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-    <!-- 幹嘛一直刪掉我的註解!!!!!! -->
-    <!-- 指紋辨識 -->
-    <!-- 指紋辨識 -->
-    <!-- 指紋辨識 -->
-    <!-- 指紋辨識 -->
-    <!-- 指紋辨識 -->
-    <!-- 指紋辨識 -->
-    <!-- 指紋辨識 -->
-
 
     <application
         android:allowBackup="true"
@@ -24,15 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".Lesson21.Lesson21Activity"></activity>
+
         <service
             android:name=".IDLAFirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-            
         </service>
 
         <activity android:name=".Lesson20.Lesson20Activity" />

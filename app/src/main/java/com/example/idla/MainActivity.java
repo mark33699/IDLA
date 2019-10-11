@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.idla.Lesson13.Lesson13Activity;
@@ -18,6 +19,11 @@ import com.example.idla.Lesson17.Lesson17Activity;
 import com.example.idla.Lesson18.Register.ui.login.Lesson18RegisterActivity;
 import com.example.idla.Lesson19.Lesson19Activity;
 import com.example.idla.Lesson20.Lesson20Activity;
+import com.example.idla.Lesson21.Lesson21Activity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -37,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Log.d("MarkFly","Hello World");
+
+        listenFCMToken();
 
         listView = findViewById(R.id.main_listView); //取得畫面
 
@@ -77,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 16 - 本地儲存");
         titles.add("Lesson 17 - Room");
         titles.add("Lesson 18 - ActionBar");
+        titles.add("Lesson 19 - FCM Notification");
 
         classes = new ArrayList<>();
 //        classes.add(Lesson03Activity.class);
@@ -97,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson18RegisterActivity.class);
         classes.add(Lesson19Activity.class);
         classes.add(Lesson20Activity.class);
+        classes.add(Lesson21Activity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)
@@ -107,5 +117,22 @@ public class MainActivity extends AppCompatActivity {
             hashMap.put("title",titles.get(index));
             items.add(hashMap);
         }
+    }
+
+    private void listenFCMToken()
+    {
+        FirebaseInstanceId
+            .getInstance()
+            .getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>()
+        {
+            @Override
+            public void onComplete(@NonNull Task<InstanceIdResult> task)
+            {
+                if (task.isSuccessful() && task.getResult() != null)
+                {
+                    Log.d("MF❤️", "FCM token: " + task.getResult().getToken());
+                }
+            }
+        });
     }
 }
