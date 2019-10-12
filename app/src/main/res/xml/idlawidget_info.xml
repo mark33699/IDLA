@@ -3,7 +3,7 @@
     android:initialKeyguardLayout="@layout/idlawidget"
     android:initialLayout="@layout/idlawidget"
     android:minWidth="40dp"
-    android:minHeight="250dp"
+    android:minHeight="195dp"
     android:previewImage="@drawable/example_appwidget_preview"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="86400000"

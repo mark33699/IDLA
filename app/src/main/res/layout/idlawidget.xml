@@ -1,20 +1,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#09C"
+    android:background="@color/red"
     android:padding="@dimen/widget_margin">
 
     <Button
         android:id="@+id/appwidget_btn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
         android:layout_margin="8dp"
         android:gravity="center"
-        android:background="@color/gray"
+        android:clickable="true"
+        android:background="@color/red"
         android:text="@string/appwidget_text"
-        android:textColor="#ffffff"
+        android:textColor="#000000"
         android:textSize="28sp" />
 
 </RelativeLayout>
