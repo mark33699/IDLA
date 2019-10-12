@@ -37,6 +37,6 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_lesson18_login">Login</string>
-    <string name="appwidget_text">EXAMPLE</string>
+    <string name="appwidget_text">按我按我按我按我按我</string>
     <string name="add_widget">Add widget</string>
 </resources>
