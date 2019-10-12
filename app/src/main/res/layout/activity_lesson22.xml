@@ -5,25 +5,27 @@
     android:padding="@dimen/widget_margin">
 
     <Button
-        android:id="@+id/appwidget_btn"
+        android:id="@+id/lesson22_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:background="@color/gray"
-        android:text="@string/appwidget_text"
+        android:text="更新到widget"
+        android:onClick="updateWidget"
         android:textColor="#ffffff"/>
 
-    <!--剩下的空間都是留給最後的元件-->
-    <TextView
-        android:id="@+id/appwidget_label"
+    <EditText
+        android:id="@+id/lesson22_input"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp"
-        android:layout_above="@id/appwidget_btn"
-        android:minLines="2"
+        android:layout_above="@id/lesson22_btn"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="textMultiLine"
         android:gravity="center_horizontal"
-        android:text="尚未\n編輯" />
+        android:background="@android:drawable/edit_text"
+        android:minLines="2" />
 
 </RelativeLayout>

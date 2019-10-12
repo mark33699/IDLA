@@ -18,8 +18,9 @@ import com.example.idla.Lesson16.Lesson16Activity;
 import com.example.idla.Lesson17.Lesson17Activity;
 import com.example.idla.Lesson18.Register.ui.login.Lesson18RegisterActivity;
 import com.example.idla.Lesson19.Lesson19Activity;
-import com.example.idla.Lesson20.Lesson20Activity;
-import com.example.idla.Lesson21.Lesson21Activity;
+import com.example.idla.Lesson20_22.Lesson20Activity;
+import com.example.idla.Lesson20_22.Lesson21Activity;
+import com.example.idla.Lesson20_22.Lesson22Activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 17 - Room");
         titles.add("Lesson 18 - ActionBar");
         titles.add("Lesson 19 - FCM Notification");
+        titles.add("Lesson 20 - APP widget");
 
         classes = new ArrayList<>();
 //        classes.add(Lesson03Activity.class);
@@ -107,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson19Activity.class);
         classes.add(Lesson20Activity.class);
         classes.add(Lesson21Activity.class);
+        classes.add(Lesson22Activity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)

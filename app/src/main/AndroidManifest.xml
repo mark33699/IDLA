@@ -15,9 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDefault"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
+        <activity android:name=".Lesson20_22.Lesson22Activity"></activity>
+
         <receiver android:name=".IDLAWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
 
             <meta-data
@@ -25,7 +28,7 @@
                 android:resource="@xml/idlawidget_info" />
         </receiver>
 
-        <activity android:name=".Lesson21.Lesson21Activity" />
+        <activity android:name=".Lesson20_22.Lesson21Activity" />
 
         <service
             android:name=".IDLAFirebaseMessagingService"
@@ -36,7 +39,7 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".Lesson20.Lesson20Activity" />
+        <activity android:name=".Lesson20_22.Lesson20Activity" />
         <activity android:name=".Lesson19.Lesson19Activity" />
 
         <meta-data

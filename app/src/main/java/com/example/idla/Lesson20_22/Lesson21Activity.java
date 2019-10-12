@@ -1,4 +1,4 @@
-package com.example.idla.Lesson21;
+package com.example.idla.Lesson20_22;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

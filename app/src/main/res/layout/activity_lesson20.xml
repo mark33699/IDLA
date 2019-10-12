@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/red"
-    tools:context="com.example.idla.Lesson20.Lesson20Activity">
+    tools:context="com.example.idla.Lesson20_22.Lesson20Activity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/mark_tool_bar"

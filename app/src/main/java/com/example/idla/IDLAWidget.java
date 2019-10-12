@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+import com.example.idla.Lesson20_22.Lesson22Activity;
+
 /**
  * Implementation of App Widget functionality.
  */
@@ -19,7 +21,7 @@ public class IDLAWidget extends AppWidgetProvider
 
         // Construct the RemoteViews object
         RemoteViews remoteView = new RemoteViews(context.getPackageName(), com.example.idla.R.layout.idlawidget);
-        remoteView.setOnClickPendingIntent(com.example.idla.R.id.appwidget_btn, PendingIntent.getActivity(context,0,new Intent(context,MainActivity.class),0));
+        remoteView.setOnClickPendingIntent(com.example.idla.R.id.appwidget_btn, PendingIntent.getActivity(context,0,new Intent(context, Lesson22Activity.class),0));
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, remoteView);
@@ -48,9 +50,10 @@ public class IDLAWidget extends AppWidgetProvider
     }
 
     @Override
-    public void onReceive(Context context, Intent intent) {
+    public void onReceive(Context context, Intent intent)
+    {
         super.onReceive(context, intent);
-        Log.d("MF❤️","APP Widget onReceive");
+        Log.d("MF❤️","APP Widget onReceive" + intent.getStringExtra("message"));
     }
 }
 

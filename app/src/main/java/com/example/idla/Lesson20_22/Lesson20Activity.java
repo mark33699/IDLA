@@ -1,4 +1,4 @@
-package com.example.idla.Lesson20;
+package com.example.idla.Lesson20_22;
 
 import android.os.Bundle;
 import android.view.MenuItem;
