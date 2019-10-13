@@ -7,8 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/main_listView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

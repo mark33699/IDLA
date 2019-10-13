@@ -13,6 +13,7 @@ public class BaseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_base);
 
         String title = getIntent().getStringExtra("title");
+        title = title == null ? "null" : title;
         Log.d("MF",title);
         this.setTitle(title);
     }
