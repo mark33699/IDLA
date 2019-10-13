@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        setContentView(R.layout.activity_main_new);
 
         Log.d("MarkFly","Hello World");
 
@@ -62,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
 
         setupData(); //產生資料
 
+        adapt();
+
+    }
+
+    private void adapt()
+    {
         arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1, titles); //使用樣式跟資料產生適配器
         listView.setAdapter(arrayAdapter); //餵給listView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() { //監聽事件(大括號裡除了實作方法, 不能寫別的東西)

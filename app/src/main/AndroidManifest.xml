@@ -134,7 +134,8 @@
         <activity android:name=".Lesson04.Lesson04Activity" />
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:label="iOS Developer Learning Android">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <!-- 只要加新的Activity, sync後, 這邊就一定會插個空行, 金變態 -->
