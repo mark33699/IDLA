@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.RemoteViews;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.example.idla.R;
 
@@ -28,7 +27,6 @@ public class Lesson22Activity extends AppCompatActivity
     {
         Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
         intent.putExtra("message",editText.getText().toString());
-        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
         try {

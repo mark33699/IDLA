@@ -38,5 +38,6 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_lesson18_login">Login</string>
     <string name="appwidget_text">點我\n編輯</string>
+    <string name="appwidget_text_new">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
 </resources>

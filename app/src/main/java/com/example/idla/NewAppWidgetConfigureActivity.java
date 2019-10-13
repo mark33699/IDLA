@@ -57,7 +57,7 @@ public class NewAppWidgetConfigureActivity extends Activity {
         if (titleValue != null) {
             return titleValue;
         } else {
-            return context.getString(com.example.idla.R.string.appwidget_text);
+            return context.getString(R.string.appwidget_text_new);
         }
     }
 
