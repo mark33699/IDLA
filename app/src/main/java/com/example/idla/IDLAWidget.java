@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.RemoteViews;
+import android.widget.Toast;
 
 import com.example.idla.Lesson20_22.Lesson22Activity;
 
@@ -53,7 +54,15 @@ public class IDLAWidget extends AppWidgetProvider
     public void onReceive(Context context, Intent intent)
     {
         super.onReceive(context, intent);
-        Log.d("MF❤️","APP Widget onReceive" + intent.getStringExtra("message"));
+
+        if (intent.getStringExtra("message") == null)
+        {
+            return;
+        }
+
+        String s = "APP Widget onReceive: " + intent.getStringExtra("message");
+        Log.d("MF❤️",s);
+        Toast.makeText(context,s,Toast.LENGTH_LONG).show();
     }
 }
 

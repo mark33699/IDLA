@@ -20,7 +20,7 @@
         <receiver android:name=".IDLAWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+                <!--<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />-->
             </intent-filter>
 
             <meta-data
