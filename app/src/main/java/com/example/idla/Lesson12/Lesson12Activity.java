@@ -5,14 +5,14 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Lesson12Activity extends AppCompatActivity
+public class Lesson12Activity extends BaseActivity
 {
     private enum FragmentType
     {

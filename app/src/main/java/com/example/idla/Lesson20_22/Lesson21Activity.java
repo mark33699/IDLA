@@ -7,12 +7,12 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class Lesson21Activity extends AppCompatActivity
+public class Lesson21Activity extends BaseActivity
 {
     BroadcastReceiver broadcastReceiver;
     TextView textView;

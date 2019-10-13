@@ -9,8 +9,7 @@ import android.os.Bundle;
 import android.os.CancellationSignal;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
 import java.util.Timer;
@@ -18,7 +17,7 @@ import java.util.TimerTask;
 
 //import androidx.core.os.CancellationSignal;
 
-public class Lesson16Activity extends AppCompatActivity
+public class Lesson16Activity extends BaseActivity
 {
     private TextView textView;
     private Timer timer;

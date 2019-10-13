@@ -11,6 +11,16 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.idla.Lesson03.Lesson03Activity;
+import com.example.idla.Lesson04.Lesson04Activity;
+import com.example.idla.Lesson05.Lesson05Activity;
+import com.example.idla.Lesson06_10.Lesson06Activity;
+import com.example.idla.Lesson06_10.Lesson07Activity;
+import com.example.idla.Lesson06_10.Lesson08Activity;
+import com.example.idla.Lesson06_10.Lesson09Activity;
+import com.example.idla.Lesson06_10.Lesson10Activity;
+import com.example.idla.Lesson11.Lesson11Activity;
+import com.example.idla.Lesson12.Lesson12Activity;
 import com.example.idla.Lesson13.Lesson13Activity;
 import com.example.idla.Lesson14.Lesson14Activity;
 import com.example.idla.Lesson15.Lesson15Activity;
@@ -68,16 +78,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupData() {
         titles = new ArrayList<>();
-//        titles.add("Lesson 01 - Activity");
-//        titles.add("Lesson 02 - Layout");
-//        titles.add("Lesson 03 - ConstraintLayout");
-//        titles.add("Lesson 04 - TextView/EditText/Button/Dialog");
-//        titles.add("Lesson 05 - ImagePicker");
-//        titles.add("Lesson 06 - Spinner/DatePickerDialog");
-//        titles.add("Lesson 07 - 各種按鈕");
-//        titles.add("Lesson 08 - SeekBar/ProgressBar");
-//        titles.add("Lesson 09 - RecycleView");
-//        titles.add("Lesson 10 - BottomNavigation");
+        titles.add("Lesson 01 - Activity");
+        titles.add("Lesson 02 - Layout");
+        titles.add("Lesson 03 - ConstraintLayout");
+        titles.add("Lesson 04 - TextView/EditText/Button/Dialog");
+        titles.add("Lesson 05 - ImagePicker");
+        titles.add("Lesson 06 - Spinner/DatePickerDialog");
+        titles.add("Lesson 07 - 各種按鈕");
+        titles.add("Lesson 08 - SeekBar/ProgressBar");
+        titles.add("Lesson 09 - RecycleView");
+        titles.add("Lesson 10 - BottomNavigation");
+        //十個一數
         titles.add("Lesson 11 - call API");
         titles.add("Lesson 12 - JSON to Model");
         titles.add("Lesson 13 - Activity Gallery");
@@ -90,16 +101,17 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 20 - APP widget");
 
         classes = new ArrayList<>();
-//        classes.add(Lesson03Activity.class);
-//        classes.add(Lesson04Activity.class);
-//        classes.add(Lesson05Activity.class);
-//        classes.add(Lesson06Activity.class);
-//        classes.add(Lesson07Activity.class);
-//        classes.add(Lesson08Activity.class);
-//        classes.add(Lesson09Activity.class);
-//        classes.add(Lesson10Activity.class);
-//        classes.add(Lesson11Activity.class);
-//        classes.add(Lesson12Activity.class);
+        classes.add(Lesson03Activity.class);
+        classes.add(Lesson04Activity.class);
+        classes.add(Lesson05Activity.class);
+        classes.add(Lesson06Activity.class);
+        classes.add(Lesson07Activity.class);
+        classes.add(Lesson08Activity.class);
+        classes.add(Lesson09Activity.class);
+        classes.add(Lesson10Activity.class);
+        classes.add(Lesson11Activity.class);
+        classes.add(Lesson12Activity.class);
+        //十個一數
         classes.add(Lesson13Activity.class);
         classes.add(Lesson14Activity.class);
         classes.add(Lesson15Activity.class);

@@ -4,12 +4,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class Lesson20Activity extends AppCompatActivity
+public class Lesson20Activity extends BaseActivity
 {
     androidx.appcompat.widget.Toolbar toolbarNewX;
 

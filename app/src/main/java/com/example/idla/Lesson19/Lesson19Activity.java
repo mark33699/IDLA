@@ -11,8 +11,8 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
-public class Lesson19Activity extends AppCompatActivity
+public class Lesson19Activity extends BaseActivity
 {
     private ListView listView;
     private List<Note> notes;

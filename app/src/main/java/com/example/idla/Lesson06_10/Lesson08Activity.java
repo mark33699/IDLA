@@ -11,8 +11,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
 import java.util.ArrayList;
@@ -20,7 +19,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-public class Lesson08Activity extends AppCompatActivity {
+public class Lesson08Activity extends BaseActivity {
 
     private Boolean isAndroidOnItemSelected = true;
 

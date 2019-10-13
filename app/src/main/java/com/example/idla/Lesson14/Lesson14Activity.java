@@ -6,8 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 import com.google.gson.Gson;
 
@@ -21,7 +20,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class Lesson14Activity extends AppCompatActivity
+public class Lesson14Activity extends BaseActivity
 {
     private EditText editText;
     private TextView textView;

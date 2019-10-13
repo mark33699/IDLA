@@ -22,7 +22,9 @@ public class IDLAWidget extends AppWidgetProvider
 
         // Construct the RemoteViews object
         RemoteViews remoteView = new RemoteViews(context.getPackageName(), com.example.idla.R.layout.idlawidget);
-        remoteView.setOnClickPendingIntent(com.example.idla.R.id.appwidget_btn, PendingIntent.getActivity(context,0,new Intent(context, Lesson22Activity.class),0));
+        Intent intent = new Intent(context, Lesson22Activity.class);
+        intent.putExtra("title","Lesson 20 - APP widget");
+        remoteView.setOnClickPendingIntent(com.example.idla.R.id.appwidget_btn, PendingIntent.getActivity(context,0,intent,0));
 
         // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, remoteView);

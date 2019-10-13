@@ -3,16 +3,16 @@ package com.example.idla.Lesson11;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
 import java.util.ArrayList;
 
-public class Lesson11Activity extends AppCompatActivity
+public class Lesson11Activity extends BaseActivity
 {
     private RecyclerView recyclerView;
 

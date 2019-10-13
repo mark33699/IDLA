@@ -6,12 +6,11 @@ import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 import com.google.android.material.chip.Chip;
 
-public class Lesson09Activity extends AppCompatActivity {
+public class Lesson09Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

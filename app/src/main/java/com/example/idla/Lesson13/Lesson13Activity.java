@@ -8,8 +8,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
 import org.jetbrains.annotations.NotNull;
@@ -23,7 +22,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class Lesson13Activity extends AppCompatActivity
+public class Lesson13Activity extends BaseActivity
 {
     EditText editTextEmail;
     EditText editTextPassword;

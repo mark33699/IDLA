@@ -9,11 +9,10 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class Lesson10Activity extends AppCompatActivity {
+public class Lesson10Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

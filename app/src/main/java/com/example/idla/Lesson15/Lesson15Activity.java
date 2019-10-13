@@ -4,11 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class Lesson15Activity extends AppCompatActivity {
+public class Lesson15Activity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

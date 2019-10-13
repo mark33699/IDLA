@@ -8,11 +8,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RemoteViews;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.example.idla.BaseActivity;
 import com.example.idla.R;
 
-public class Lesson22Activity extends AppCompatActivity
+public class Lesson22Activity extends BaseActivity
 {
     private EditText editText;
 

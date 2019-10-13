@@ -1,6 +1,7 @@
 package com.example.idla;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +12,8 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
 
-        this.setTitle(getIntent().getStringExtra("title"));
+        String title = getIntent().getStringExtra("title");
+        Log.d("MF",title);
+        this.setTitle(title);
     }
 }
