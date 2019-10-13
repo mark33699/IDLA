@@ -1,4 +1,4 @@
-package com.example.idla;
+package com.example.idla.Widget;
 
 import android.app.Activity;
 import android.appwidget.AppWidgetManager;
@@ -9,12 +9,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.idla.R;
+
 /**
  * The configuration screen for the {@link NewAppWidget NewAppWidget} AppWidget.
  */
 public class NewAppWidgetConfigureActivity extends Activity {
 
-    private static final String PREFS_NAME = "com.example.idla.NewAppWidget";
+    private static final String PREFS_NAME = "com.example.idla.Widget.NewAppWidget";
     private static final String PREF_PREFIX_KEY = "appwidget_";
     int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
     EditText mAppWidgetText;

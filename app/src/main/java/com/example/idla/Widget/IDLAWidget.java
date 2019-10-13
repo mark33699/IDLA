@@ -1,4 +1,4 @@
-package com.example.idla;
+package com.example.idla.Widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;

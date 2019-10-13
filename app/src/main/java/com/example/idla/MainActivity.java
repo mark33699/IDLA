@@ -11,6 +11,7 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.idla.Attempt.ScrollingActivity;
 import com.example.idla.Lesson03.Lesson03Activity;
 import com.example.idla.Lesson04.Lesson04Activity;
 import com.example.idla.Lesson05.Lesson05Activity;
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         titles.add("Lesson 18 - ActionBar");
         titles.add("Lesson 19 - FCM Notification");
         titles.add("Lesson 20 - APP widget");
+        titles.add("ScrollingActivity");
 
         classes = new ArrayList<>();
         classes.add(Lesson03Activity.class);
@@ -122,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         classes.add(Lesson20Activity.class);
         classes.add(Lesson21Activity.class);
         classes.add(Lesson22Activity.class);
+        classes.add(ScrollingActivity.class);
 
         items = new ArrayList<>();//等學會Adapter再用
         for(String str: titles)
