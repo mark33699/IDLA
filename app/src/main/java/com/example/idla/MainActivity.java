@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -36,6 +37,7 @@ import com.example.idla.Lesson20_22.Lesson21Activity;
 import com.example.idla.Lesson20_22.Lesson22Activity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 
@@ -57,13 +59,17 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-//        setContentView(R.layout.activity_main_new);
+//        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_new);
 
         Log.d("MarkFly","Hello World");
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         listenFCMToken();
 
+        //For ListView
 //        listView = findViewById(R.id.main_listView); //取得畫面
 //        setupListViewData(); //產生資料
 //        adaptListView();
