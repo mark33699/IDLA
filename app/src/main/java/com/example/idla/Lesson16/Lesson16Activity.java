@@ -137,7 +137,10 @@ public class Lesson16Activity extends BaseActivity
     public void onPause()
     {
         super.onPause();
-        cancellationSignal.cancel();
-        cancellationSignal = null;
+        if (cancellationSignal != null)
+        {
+            cancellationSignal.cancel();
+            cancellationSignal = null;
+        }
     }
 }

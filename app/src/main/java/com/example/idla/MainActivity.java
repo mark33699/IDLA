@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity
 
         Log.d("MarkFly","Hello World");
 
+        setTitle("iOS Developer Learning Android");
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
