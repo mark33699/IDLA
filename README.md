@@ -13,6 +13,8 @@ iOS Developer Learning Android
 
 以下方介紹為準
 
+---
+
 [Lesson 01 - Android Studio](https://ithelp.ithome.com.tw/articles/10215881)
 * 大致介紹了AS的板面配置: [像這樣](https://i.imgur.com/KcnMkKa.jpg)
 * 最大的差別在於Android有`規定各種檔案存放的路徑`
@@ -176,7 +178,7 @@ iOS Developer Learning Android
 
 [Lesson 20 - Activity Gallery](https://ithelp.ithome.com.tw/articles/10225142)
 
-![](https://i.imgur.com/oYmMInP.gif)
+[不知道為什麼有些圖在github上看不到...點我開啟](https://i.imgur.com/oYmMInP.gif)
 * `內建`一些範本可以參考或修改
 * Drawer: 漢堡側邊欄
 * Tabbed: 左右滑動切換頁面
@@ -193,7 +195,7 @@ iOS Developer Learning Android
 
 [Lesson 22 - Google Map](https://ithelp.ithome.com.tw/articles/10225921)
 
-![](https://i.imgur.com/GW9eGeB.gif)
+[不知道為什麼有些圖在github上看不到...點我開啟](https://i.imgur.com/GW9eGeB.gif)
 * 要去Google API網站申請`API Key`才能用
 * 用`getSystemService(Context.LOCATION_SERVICE)`取得locationManager
 * 用locationManager.requestLocationUpdates去定位
@@ -208,7 +210,7 @@ iOS Developer Learning Android
 
 [Lesson 24 - Room](https://ithelp.ithome.com.tw/articles/10226611)
 
-![](https://i.imgur.com/F7FM9PT.gif)
+[不知道為什麼有些圖在github上看不到...點我開啟](https://i.imgur.com/F7FM9PT.gif)
 * 是個Google官方提供的套件
 * 用來存取SQLite達到本地資料庫的CRUD
 * 分成三個Class：`Entity`(就是Model)、`DAO`(負責新刪改查)、`Database`(存資料的地方)
@@ -233,7 +235,7 @@ iOS Developer Learning Android
 
 [Lesson 27 - APP Widget](https://ithelp.ithome.com.tw/articles/10227564)
 
-![](https://i.imgur.com/gTo3Av1.gif)
+[不知道為什麼有些圖在github上看不到...點我開啟](https://i.imgur.com/gTo3Av1.gif)
 * Android的widget`繼承於BroadcastReceiver`
 * 生命週期：onEnabled(加入第一個widget時呼叫)、onUpdate(只要加入widget時就會呼叫)、onDeleted(只要刪除widget時就會呼叫)、onDisabled(刪除最後一個widget時呼叫)
 * onReceive：因為是繼承BroadcastReceiver，所以也可以發廣播給它
@@ -243,7 +245,7 @@ iOS Developer Learning Android
 
 [Lesson 28 - 伸縮Banner + 瀑布流 + CardView](https://ithelp.ithome.com.tw/articles/10227863)
 
-![](http://fp1.fghrsh.net/2019/10/16/380d897ae28a99943fa14db5049790ec.gif)
+[不知道為什麼有些圖在github上看不到...點我開啟](http://fp1.fghrsh.net/2019/10/16/380d897ae28a99943fa14db5049790ec.gif)
 * `CardView`: 就是FrameLayout的一種，但是加了一些現在常用的設計，例如圓角/陰影等等
 * 瀑布流: 給RecycleView一個`StaggeredGridLayoutManager`就OK了，超簡單
 * 伸縮Banner: 透過`CoordinatorLayout`跟CollapsingToolbarLayout即可達成～不用寫code
