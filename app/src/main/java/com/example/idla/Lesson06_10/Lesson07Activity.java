@@ -1,16 +1,18 @@
 package com.example.idla.Lesson06_10;
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.media.ExifInterface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -19,6 +21,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
 import com.example.idla.BaseActivity;
 import com.example.idla.R;
@@ -26,6 +29,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 
 //import androidx.exifinterface.media.ExifInterface; //會FileNotFoundException
 //import android.support.media.ExifInterface //有這東東嗎？
@@ -50,12 +54,6 @@ public class Lesson07Activity extends BaseActivity {
         imageView = findViewById(R.id.imageView4);
         frameLayout = findViewById(R.id.frame_layout1);
 
-//        Fresco.initialize(this);
-//        simpleDraweeView = new SimpleDraweeView(this); //直接閃退...
-//        simpleDraweeView.setLayoutParams(new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-//        simpleDraweeView.setScaleType(ImageView.ScaleType.FIT_XY);
-//        simpleDraweeView.setBackgroundColor(getResources().getColor(R.color.green));
-//        frameLayout.addView(simpleDraweeView);
     }
 
     public void changeAvatar(View view)
@@ -118,25 +116,11 @@ public class Lesson07Activity extends BaseActivity {
                 ContentResolver contentResolver = this.getContentResolver();
                 try
                 {
-                    //要API28以上, 不然會閃
-//                    ImageDecoder.Source source = ImageDecoder.createSource(contentResolver,data.getData());
-//                    Bitmap bmp = ImageDecoder.decodeBitmap(source);
 
                     Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
 
                     imageView.setImageBitmap(bmp);
-                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(data.getData().getPath())));
-//                    simpleDraweeView.setImageURI(data.getData());
-
-//                    selectedImagePath = getRealPathFromURIPath(data.getData(), this);
-//                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
-//                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(selectedImagePath)));
-
-                    //綠豆湯
-//                    String imagePath = cursor.getString(cursor.getColumnIndex(
-//                            MediaStore.Images.Media.DATA ));
-//                    Bitmap bitmap = BitmapFactory.decodeFile(imagePath);
-//                    image.setImageBitmap(bitmap);
+                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(data);
                 }
                 catch (FileNotFoundException e)
                 {
@@ -151,51 +135,17 @@ public class Lesson07Activity extends BaseActivity {
         }
     }
 
-    private String getRealPathFromURIPath(Uri contentURI, Activity activity)
-    {
-        Cursor cursor = activity.getContentResolver().query(contentURI, null, null, null, null);
-        if (cursor == null)
-        {
-            return contentURI.getPath();
-        }
-        else
-            {
-            cursor.moveToFirst();
-            int idx = cursor.getColumnIndex(MediaStore.Images.ImageColumns.DATA);
-            return cursor.getString(idx);
-        }
-    }
-
-//    private Bitmap getRotatedBitmap(Bitmap originBitmap)
-//    {
-//        try
-//        {
-//            ExifInterface exifInterface = new ExifInterface(String.valueOf(originBitmap));
-//            int intOrientation = exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION,ExifInterface.ORIENTATION_NORMAL);
-//            switch (intOrientation)
-//            {
-//                case
-//            }
-//        }
-//        catch (IOException e)
-//        {
-//            e.printStackTrace();
-//        }
-//    }
-
-    private int getBitmapDegree(String path) {
+    private int getBitmapDegree(Intent data) {
         int degree = 0;
         try {
+
+            Uri uri = data.getData();
+            InputStream inputStream = getContentResolver().openInputStream(uri);
+
             // 從指定路徑下讀取圖片，並獲取其EXIF資訊
-            ExifInterface exifInterface = new ExifInterface(path);
+            ExifInterface exifInterface = new ExifInterface(inputStream);
             // 獲取圖片的旋轉資訊
             int orientation = exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION,-1);
-            Log.d("MF",exifInterface.getAttribute(ExifInterface.TAG_DATETIME) + "");
-            Log.d("MF",exifInterface.getAttribute(ExifInterface.TAG_MAKE) + "");
-            Log.d("MF",exifInterface.getAttribute(ExifInterface.TAG_MODEL) + "");
-            Log.d("MF",exifInterface.getAttribute(ExifInterface.TAG_GPS_TIMESTAMP) + "");
-            Log.d("MF",exifInterface.getAttribute(ExifInterface.TAG_Y_RESOLUTION) + "");
-            Log.d("MF",exifInterface.getAttribute(ExifInterface.TAG_COLOR_SPACE) + "");
             switch (orientation) {
                 case ExifInterface.ORIENTATION_ROTATE_90:
                     degree = 90;
@@ -214,23 +164,6 @@ public class Lesson07Activity extends BaseActivity {
     }
 
     public static Bitmap rotateBitmapByDegree(Bitmap bitmap, int degrees) {
-//        Bitmap returnBm = null;
-//
-//        // 根據旋轉角度，生成旋轉矩陣
-//        Matrix matrix = new Matrix();
-//        matrix.postRotate(degree);
-//        try {
-//            // 將原始圖片按照旋轉矩陣進行旋轉，並得到新的圖片
-//            returnBm = Bitmap.createBitmap(bm, 0, 0, bm.getWidth(), bm.getHeight(), matrix, true);
-//        } catch (OutOfMemoryError e) {
-//        }
-//        if (returnBm == null) {
-//            returnBm = bm;
-//        }
-//        if (bm != returnBm) {
-//            bm.recycle();
-//        }
-//        return returnBm;
         if (degrees == 0 || null == bitmap) {
             return bitmap;
         }
