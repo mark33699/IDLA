@@ -100,7 +100,7 @@ public class Lesson07Activity extends BaseActivity {
             case kCameraIntentRequestCode:
             {
                 Bitmap bitmap = (Bitmap)data.getExtras().get("data");
-                imageView.setImageBitmap(bitmap);
+                imageView.setImageBitmap(rotateBitmapByDegree(bitmap, getBitmapDegree(data)));
                 break;
             }
             case kAlbumIntentRequestCode:
@@ -110,13 +110,8 @@ public class Lesson07Activity extends BaseActivity {
                 ContentResolver contentResolver = this.getContentResolver();
                 try
                 {
-
-                    Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
-
-                    int degree = getBitmapDegree(data);
-                    Bitmap rotatedBmp = rotateBitmapByDegree(bmp, degree);
-                    imageView.setImageBitmap(rotatedBmp);
-
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
+                    imageView.setImageBitmap(rotateBitmapByDegree(bitmap, getBitmapDegree(data)));
                 }
                 catch (FileNotFoundException e)
                 {
