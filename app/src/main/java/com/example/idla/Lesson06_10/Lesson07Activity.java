@@ -1,5 +1,6 @@
 package com.example.idla.Lesson06_10;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -7,9 +8,11 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -17,12 +20,15 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.FileProvider;
 import androidx.exifinterface.media.ExifInterface;
 
 import com.example.idla.BaseActivity;
 import com.example.idla.R;
 import com.facebook.drawee.view.SimpleDraweeView;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -50,6 +56,15 @@ public class Lesson07Activity extends BaseActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ActivityCompat.requestPermissions(this,
+                new String[]{ Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                              Manifest.permission.READ_EXTERNAL_STORAGE },
+                0);
+    }
+
     public void changeAvatar(View view)
     {
         Dialog dialog = new AlertDialog.Builder(this)
@@ -59,7 +74,21 @@ public class Lesson07Activity extends BaseActivity {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
 
-                    startActivityForResult(new Intent(MediaStore.ACTION_IMAGE_CAPTURE),kCameraIntentRequestCode);
+                    Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                    //這行是利用tmpFile先新增一張照片，在開啟Android的照相機介面時，把這張照片指定為輸出檔案位置
+                    File tmpFile = new File(Environment.getExternalStorageDirectory(),"image.jpg");
+
+                    //就是Android不再允许在app中把file://Uri暴露给其他app
+                    //Uri outputFileUri = Uri.fromFile(tmpFile);
+
+                    //所以改用FileProvider
+                    Uri outputFileUri = FileProvider.getUriForFile(
+                            Lesson07Activity.this,
+                            getPackageName() + ".provider",
+                            tmpFile);
+
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT,outputFileUri);
+                    startActivityForResult(intent,kCameraIntentRequestCode);
                 }
             })
             .setNegativeButton("相簿", new DialogInterface.OnClickListener() {
@@ -85,11 +114,21 @@ public class Lesson07Activity extends BaseActivity {
         dialog.show();
     }
 
+    private Uri getCaptureImageOutputUri() {
+        Uri outputFileUri = null;
+        File getImage = getExternalFilesDir("");
+        if (getImage != null) {
+            outputFileUri = Uri.fromFile(new File(getImage.getPath(), "image.jpg"));
+        }
+        return outputFileUri;
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
 
+        //如果用FileProvider, data會變成null...
         if (resultCode != Activity.RESULT_OK || data == null)
         {
             return;
@@ -99,14 +138,14 @@ public class Lesson07Activity extends BaseActivity {
         {
             case kCameraIntentRequestCode:
             {
-                Bitmap bitmap = (Bitmap)data.getExtras().get("data");
+                //Bitmap bitmap = (Bitmap)data.getExtras().get("data");//這樣只是取到縮圖...有可能會null
+                Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/image.jpg");
                 imageView.setImageBitmap(rotateBitmapByDegree(bitmap, getBitmapDegree(data)));
                 break;
             }
             case kAlbumIntentRequestCode:
             case kFileIntentRequestCode:
             {
-
                 ContentResolver contentResolver = this.getContentResolver();
                 try
                 {
