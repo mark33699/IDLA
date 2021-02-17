@@ -1,7 +1,5 @@
 package com.example.idla.Lesson06_10;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -10,9 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
-import android.media.ExifInterface;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -21,7 +17,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
+import androidx.exifinterface.media.ExifInterface;
 
 import com.example.idla.BaseActivity;
 import com.example.idla.R;
@@ -31,8 +27,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-//import androidx.exifinterface.media.ExifInterface; //會FileNotFoundException
-//import android.support.media.ExifInterface //有這東東嗎？
 
 public class Lesson07Activity extends BaseActivity {
 
@@ -119,8 +113,10 @@ public class Lesson07Activity extends BaseActivity {
 
                     Bitmap bmp = MediaStore.Images.Media.getBitmap(contentResolver,data.getData());
 
-                    imageView.setImageBitmap(bmp);
-                    imageView.setImageBitmap(rotateBitmapByDegree(bmp,getBitmapDegree(data);
+                    int degree = getBitmapDegree(data);
+                    Bitmap rotatedBmp = rotateBitmapByDegree(bmp, degree);
+                    imageView.setImageBitmap(rotatedBmp);
+
                 }
                 catch (FileNotFoundException e)
                 {
@@ -132,6 +128,8 @@ public class Lesson07Activity extends BaseActivity {
                 }
                 break;
             }
+            default:
+                throw new IllegalStateException("Unexpected value: " + requestCode);
         }
     }
 
@@ -146,6 +144,8 @@ public class Lesson07Activity extends BaseActivity {
             ExifInterface exifInterface = new ExifInterface(inputStream);
             // 獲取圖片的旋轉資訊
             int orientation = exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION,-1);
+            Log.d("!!!!", "原度數為: " + orientation);
+
             switch (orientation) {
                 case ExifInterface.ORIENTATION_ROTATE_90:
                     degree = 90;
